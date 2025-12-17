@@ -44,5 +44,20 @@ class DatabaseSeeder extends Seeder
         $this->command->newLine();
         $this->command->info('🎉 Database seeding completed!');
         $this->command->info('📧 Admin login: admin@example.com / password');
-    }
+    
+// Di dalam method run()
+User::create([
+    'name' => 'Admin',
+    'email' => 'admin@tokoonline.com',
+    'password' => Hash::make('password'),
+    'role' => 'admin',
+]);
+
+User::create([
+    'name' => 'Customer',
+    'email' => 'customer@tokoonline.com',
+    'password' => Hash::make('password'),
+    'role' => 'customer',
+]);
+}
 }
