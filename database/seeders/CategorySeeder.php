@@ -1,15 +1,13 @@
 <?php
+// database/seeders/CategorySeeder.php
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $categories = [
@@ -58,4 +56,3 @@ class CategorySeeder extends Seeder
         $this->command->info('✅ Categories seeded successfully!');
     }
 }
-    

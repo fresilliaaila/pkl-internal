@@ -1,22 +1,19 @@
 <?php
+// database/factories/ProductFactory.php
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
- */
 class ProductFactory extends Factory
 {
     /**
      * Define the model's default state.
-     *
-     * @return array<string, mixed>
      */
     public function definition(): array
     {
-       
         $name = fake()->words(rand(2, 5), true);
         $price = fake()->numberBetween(10000, 5000000);
 
@@ -61,4 +58,3 @@ class ProductFactory extends Factory
         ]);
     }
 }
- 
